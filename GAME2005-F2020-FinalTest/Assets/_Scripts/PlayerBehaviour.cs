@@ -68,7 +68,10 @@ public class PlayerBehaviour : MonoBehaviour
             if (Input.GetAxisRaw("Jump") > 0.0f)
             {
                 body.velocity = transform.up * speed * 0.1f * Time.deltaTime;
+            
             }
+
+
 
             transform.position += body.velocity;
         }
@@ -92,6 +95,7 @@ public class PlayerBehaviour : MonoBehaviour
     void FixedUpdate()
     {
         GroundCheck();
+
     }
 
     private void GroundCheck()
